@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Locara
 
-## Getting Started
+## Table of Cotents
 
-First, run the development server:
+- [About](#about)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## About <a name="about"></a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The Purpose of this Project was to test and demonstrate my skills in various web development technologies to create an online fictional car rental/subscription service called Locara.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Originally I was going to fetch data from a car/vehicle api, but since I struggled to find a free and open api I decided instead to create a webscrapper using Python to scrape data from carsales.com.au and use that instead. Well I will, but as of writing this I have just manually collected the data of four cars.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Technologies used in this project:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- HTML
+- CSS/SCSS
+- JavaScript/TypeScript
+- React
+- Next JS
 
-## Learn More
+Libraries used in this project
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- TS Particles
+- React
+- Next JS
+- React Icons

@@ -1,0 +1,8 @@
+// Animation Variables
+@mixin home-animation($title) {
+  animation: $title 0.9s ease-in;
+  animation-fill-mode: forwards;
+  transform: scale(0.8);
+}
+
+// Animation Keyframes

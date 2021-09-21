@@ -1,0 +1,85 @@
+@use '../abstracts/fonts' as *;
+@import "../abstracts/animations";
+
+.search-form-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include home-animation(form-load);
+}
+
+.button-loader {
+  width: 5.25rem;
+  height: 2.2rem;
+  background-color: black;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  transition: all ease-in-out 0.1s;
+  -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.8);
+}
+
+.search-form-home {
+  display: flex;
+
+  input {
+    font-family: $website-title;
+    border: 1px solid rgba(83, 83, 83, 0.9);
+    border-radius: 8px;
+    margin-right: 1.25rem;
+    padding: 0.25rem 1rem 0.25rem 0.85rem;
+    width: 22rem;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid #953aa1;
+  }
+
+  .button {
+    width: 5.25rem;
+    height: 2.2rem;
+    cursor: pointer;
+    background-color: rgb(189, 85, 202);
+    border: 1px solid #bd63c9;
+    border-radius: 6px;
+    padding: 0.25rem 2rem;
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(149, 58, 161, 0.8);
+    box-shadow: 0px 3px 6px 1px rgba(149, 58, 161, 0.8);
+    transition: all ease-in-out 0.1s;
+  }
+
+  .button:hover {
+    border-color: rgb(255, 0, 149);
+    background-color: rgb(255, 0, 149);
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(255, 0, 149, 0.8);
+    box-shadow: 0px 3px 6px 1px rgba(255, 0, 149, 0.8);
+    transform: scale(1.025);
+  }
+
+  .button:focus {
+    transition: all 0.1s;
+    outline: 0;
+    -webkit-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.65);
+  }
+}
+
+.search-icon {
+  color: white;
+  padding-top: 0.2rem;
+  transform: scale(2);
+}
+
+@keyframes form-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

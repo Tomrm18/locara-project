@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.nav-container {
+  color: #ececec;
+  background-color: $navbar-bg;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  animation: nav-load 0.75s ease-in;
+
+  h2 {
+    color: $navbar-colour;
+    font-family: $website-title;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: inherit;
+    margin: 0.25rem 0 0 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 0.75rem;
+  }
+
+  li {
+    margin: 0 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: all ease-in-out 0.12s;
+  }
+
+  a:hover,
+  a:focus {
+    color: white;
+    text-decoration: underline;
+    outline: 0;
+  }
+
+  a:active {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    cursor: pointer;
+    color: rgb(233, 233, 233);
+    height: fit-content;
+    padding: 0.35rem 1.25rem;
+    background-color: $navbar-btn-bg;
+    border: 1px solid rgb(43, 42, 42);
+    border-radius: 3px;
+    text-transform: inherit;
+    transition: background-color ease-in-out 0.13s;
+  }
+
+  button:hover {
+    background-color: #5a77a1;
+  }
+
+  button:active {
+    background-color: #4b76b6;
+  }
+}
+
+@keyframes nav-load {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
