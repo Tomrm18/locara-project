@@ -1,6 +1,8 @@
 import data from '../../../data.json';
 
 export default function handler(req: any, res: any):void  {
+  // Api route to fetch one specific car with an id
+  
   const ID = req.query.id;
   const filtered = data.filter(car => car.id == ID)
 

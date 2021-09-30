@@ -7,7 +7,7 @@ interface Props {
 
 const CarList:FC<Props> = ({cars}) => {
   return (
-    <div>
+    <div className="car-grid-container">
       {cars.map((car: any) => (
         <CarItem car={car} key={car.id}/>
       ))}

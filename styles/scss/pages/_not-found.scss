@@ -1,0 +1,15 @@
+.not-found-main {
+  display: flex;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}

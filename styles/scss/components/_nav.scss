@@ -1,32 +1,31 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
-.nav-container {
+.nav {
+  display: grid;
   color: #ececec;
   background-color: $navbar-bg;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   font-size: 1.25rem;
-  text-transform: uppercase;
-  animation: nav-load 0.75s ease-in;
 
   h2 {
-    color: $navbar-colour;
-    font-family: $website-title;
-    font-size: 2.5rem;
+    align-self: center;
+    color: white;
+    font-family: $secondary-font;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 300;
     text-transform: inherit;
     margin: 0.25rem 0 0 1rem;
   }
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-right: 0.75rem;
+  h2 > a {
+    transition: color 0.35s ease-in-out;
   }
 
-  li {
-    margin: 0 1.5rem;
+  h2 > a:hover {
+    color: black;
+  }
+
+  h2 > a:active {
+    color: hotpink;
   }
 
   a {
@@ -34,15 +33,32 @@
     color: inherit;
     transition: all ease-in-out 0.12s;
   }
+}
 
-  a:hover,
-  a:focus {
+.nav-home-container {
+  grid-template-columns: repeat(3, 1fr);
+  text-transform: uppercase;
+  animation: nav-load 0.75s ease-in;
+
+  ul {
+    @include flex-row;
+    justify-content: center;
+    margin-right: 0.75rem;
+  }
+
+  li {
+    font-size: clamp(1rem, 1.75vw, 2rem);
+    margin: 0 clamp(0.75rem, 3vw, 1.5rem);
+  }
+
+  li > a:hover,
+  li > a:focus {
     color: white;
     text-decoration: underline;
     outline: 0;
   }
 
-  a:active {
+  li > a:active {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: underline;
   }
@@ -72,6 +88,46 @@
   button:active {
     background-color: #4b76b6;
   }
+
+  .toggle-menu {
+    position: absolute;
+    top: 0.6rem;
+    right: 1.15rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+  }
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+
+.nav-browse-container {
+  grid-template-columns: 25% 75%;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .nav-browse-form {
+    @include flex-column;
+    align-items: center;
+    margin: 0.5rem 0 1rem 0;
+    transform: translateX(-15%);
+
+    h3 {
+      font-family: $main-font;
+      font-size: 1.9rem;
+      font-weight: 400;
+      margin-bottom: 0.35rem;
+    }
+  }
 }
 
 @keyframes nav-load {
@@ -82,5 +138,49 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-home-container {
+    .toggle-menu {
+      display: flex;
+    }
+
+    li {
+      display: none;
+    }
+  }
+
+  .nav.active {
+    display: block;
+    padding-top: 0.005rem;
+
+    li {
+      display: block;
+      padding-bottom: 0.2rem;
+    }
+
+    ul {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .nav-browse-container {
+    grid-template-columns: 25% 75%;
+  }
+}
+
+@media (max-width: 440px) {
+  .nav-browse-container {
+    grid-template-columns: 100%;
+
+    h2 {
+      display: none;
+    }
   }
 }

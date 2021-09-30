@@ -44,7 +44,7 @@ const HomeParticles:FC = () => {
             },
             particles: {
               color: {
-                value: "#a565be",
+                value: "#e7008a",
               },
               links: {
                 color: "#ffffff",
@@ -54,14 +54,14 @@ const HomeParticles:FC = () => {
                 width: 1,
               },
               collisions: {
-                enable: true,
+                enable: false,
               },
               move: {
                 direction: "bottom",
                 enable: true,
                 outMode: "out",
                 random: false,
-                speed: 1.25,
+                speed: 1,
                 straight: false,
               },
               number: {

@@ -1,11 +1,13 @@
-import { FC } from "react";
+import { NextPage } from "next";
+import SpeechBubble from "../components/SpeechBubble";
 
 
-const About:FC = () => {
+const About:NextPage = () => {
 
   return (
     <div>
-      <h1>About</h1>
+      
+      <SpeechBubble />
     </div>
   )
 }

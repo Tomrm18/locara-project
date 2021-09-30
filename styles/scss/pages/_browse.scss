@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.browse-query {
+  margin: 1.25rem 0 0 1.5rem;
+  font-size: 1.4rem;
+
+  .browse-query-span {
+    font-family: $main-font;
+    color: $secondary-text-purple;
+  }
+}

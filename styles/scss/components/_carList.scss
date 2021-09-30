@@ -1,0 +1,11 @@
+.car-grid-container {
+  margin: 2rem 0 2rem 1rem;
+  display: grid;
+  justify-content: space-around;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 22%));
+
+  div {
+    cursor: pointer;
+  }
+}

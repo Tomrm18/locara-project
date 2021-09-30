@@ -1,0 +1,22 @@
+// Text gradient underline on hover
+@mixin gradient-underline($colour) {
+  background-image: linear-gradient($colour);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+
+// background-size: 100% 3px; on element hover pseudoclass
+
+// Flex column mixin
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Flex row mixin
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}

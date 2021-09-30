@@ -24,3 +24,4 @@ Libraries used in this project
 - React
 - Next JS
 - React Icons
+- Typed.js

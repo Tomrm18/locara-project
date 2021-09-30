@@ -1,0 +1,38 @@
+.speech-bubble-container {
+  margin: 4rem 0 0 13rem;
+  animation: fade-in 1.5s linear 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.speech-bubble {
+  width: 230px;
+  height: 35px;
+  margin: 0 auto;
+  padding: 0.25rem;
+  position: relative;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 0.8rem;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 18%;
+  width: 0;
+  height: 0;
+  border: 26px solid transparent;
+  border-top-color: #000;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -11px;
+  margin-bottom: -26px;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+.typing-span {
+  font-family: $secondary-font;
+  font-size: 1.15rem;
+  padding-left: 0.5rem;
+
+  span {
+    font-weight: bold;
+    color: $secondary-text-purple;
+  }
+}

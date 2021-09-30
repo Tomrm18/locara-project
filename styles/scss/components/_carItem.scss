@@ -1,0 +1,201 @@
+@use "../abstracts/" as *;
+
+.car-item-main {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 62% 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+  border: 1px solid rgb(73, 73, 73);
+  border-radius: 4px;
+  margin: 3.5rem 3.5rem 2rem 3.5rem;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+  opacity: 0;
+  animation: fade-in 1s ease-in;
+  animation-fill-mode: forwards;
+
+  section {
+    padding: 0 0.5rem;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 3.35vw, 4rem);
+    color: $secondary-text-purple;
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    margin-bottom: 1rem;
+    @include gradient-underline($main-text-purple);
+  }
+
+  h2:hover {
+    background-size: 100% 3px;
+  }
+
+  h4 {
+    font-size: clamp(1rem, 2.85vw, 3rem);
+    margin-bottom: 0.5rem;
+  }
+
+  h2,
+  h4 {
+    font-weight: 400;
+  }
+
+  img {
+    border: 0;
+    border-right: 1px solid rgb(185, 185, 185);
+    padding-right: 0.75rem;
+    border-radius: 2px;
+  }
+
+  img:hover {
+    border: 2px solid $main-text-red;
+    padding: 0;
+  }
+
+  article {
+    color: rgb(244, 244, 244);
+    background-color: $main-text-purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 1rem;
+    transition: scale 0.3s ease;
+  }
+
+  article:hover {
+    transform: scale(1.04);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: clamp(0.75rem, 1.7vw, 2rem);
+    padding: 0.1rem 0;
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  button {
+    cursor: pointer;
+    color: rgb(244, 244, 244);
+    background-color: $main-text-red;
+    font-size: clamp(1rem, 2.25vw, 3rem);
+    margin: 0.7rem auto;
+    padding: 0.3rem 0.2rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: rgb(230, 47, 153);
+  }
+
+  button:active {
+    background-color: $main-text-red;
+  }
+}
+
+.home-particles {
+  z-index: -1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 850px) {
+  .car-item-main {
+    article {
+      padding: 0.75rem;
+      margin: 1.25rem auto;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .car-item-main {
+    article {
+      padding: 0.5rem;
+      margin: 1rem auto;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .car-item-main {
+    article {
+      padding: 0.35rem;
+      margin: 0.5rem auto;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .car-item-main {
+    article {
+      margin: 0.25rem auto;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .car-item-main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: max-content;
+    margin: 3rem auto;
+
+    img {
+      width: 250px;
+      border: 0;
+      padding: 0;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .car-item-main {
+    img {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .car-item-main {
+    img {
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .car-item-main {
+    img {
+      width: 150px;
+    }
+  }
+}

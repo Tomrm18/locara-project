@@ -1,3 +1,5 @@
+// Api route to fetch all cars
+
 import data from '../../../data.json';
 
 export default function handler(req:any, res:any):void {

@@ -1,18 +1,32 @@
 import Link from 'next/link';
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import { FaCarSide, FaTachometerAlt, FaCogs } from 'react-icons/fa';
 
 interface Props {
   car: any;
 }
 
+const handleChange = () => (console.log("change!"))
+
 const CarItem:FC<Props> = ({car}) => {
+
   return (
-    <Link href="/api/cars/[id]" as={`/api/cars/${car.id}`}>
-      <a>
-        <h3>{car.id} &rarr;</h3>
-        <p>{car.title}</p>
-        <p>{car.image}</p>
-      </a>
+    <Link href="/cars/[id]" as={`/cars/${car.id}`}>
+      <div className="car-card">
+        <a>
+          <span className="img-container">
+            <img src={car.image} alt={car.title} />
+            <p>Find out more</p>
+          </span>
+          <div className="car-details" onReset={handleChange}>
+            <h3>{car.title}</h3>
+            <p><FaTachometerAlt className="icon-meter icon" />{car.odometer} km</p>
+            <p><FaCarSide className="icon" />{car.body}</p>
+            <p><FaCogs className="icon" />{car.transmission}</p>
+            <h4>{car.price}</h4>
+          </div>
+        </a>
+      </div>
     </Link>
   )
 }
