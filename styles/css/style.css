@@ -268,8 +268,9 @@ form-search {
 }
 .form-search-home input {
   font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid rgba(83, 83, 83, 0.9);
+  border: 1px solid rgba(150, 150, 150, 0.9);
   border-radius: 8px;
+  animation: glow 1.5s infinite alternate;
   margin-right: 1.25rem;
   padding: 0.25rem 1rem 0.25rem 0.85rem;
   width: 28rem;
@@ -399,6 +400,18 @@ form-search {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0px 0px 17px 1px rgba(255, 0, 149, 0.8);
+    box-shadow: 0px 0px 17px 1px rgba(255, 0, 149, 0.8);
+    border-color: rgba(253, 55, 171, 0.8);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(170, 45, 118, 0.8);
+    box-shadow: 0px 0px 7px 1px rgba(170, 45, 118, 0.8);
+    border-color: rgba(172, 37, 115, 0.8);
   }
 }
 .circle-loader {
@@ -865,7 +878,8 @@ form-search {
   padding: 0.25rem;
   position: relative;
   background: #fff;
-  border: 1px solid black;
+  border: 1px solid #ff0080;
+  animation: glow 1.5s infinite alternate;
   border-radius: 0.8rem;
 }
 
@@ -877,7 +891,7 @@ form-search {
   width: 0;
   height: 0;
   border: 26px solid transparent;
-  border-top-color: #000;
+  border-top-color: rgba(172, 37, 115, 0.8);
   border-bottom: 0;
   border-left: 0;
   margin-left: -11px;
@@ -887,6 +901,18 @@ form-search {
 @keyframes fade-in {
   100% {
     opacity: 1;
+  }
+}
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0px 0px 13px 1px rgba(170, 45, 118, 0.8);
+    box-shadow: 0px 0px 13px 1px rgba(170, 45, 118, 0.8);
+    border-color: rgba(253, 55, 171, 0.8);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(170, 45, 118, 0.8);
+    box-shadow: 0px 0px 7px 1px rgba(170, 45, 118, 0.8);
+    border-color: rgba(172, 37, 115, 0.8);
   }
 }
 .home-title-container {
