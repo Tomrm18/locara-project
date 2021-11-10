@@ -8,20 +8,21 @@
 
 The Purpose of this Project was to test and demonstrate my skills in various web development technologies to create an online fictional car rental/subscription service called Locara.
 
-Originally I was going to fetch data from a car/vehicle api, but since I struggled to find a free and open api I decided instead to create a webscrapper using Python to scrape data from carsales.com.au and use that instead.
+All the data for each car was collected via a webscraper I built using Python's Beautiful Soup library, and uploaded to a MongoDB cluster from which I can request data via my Node/Express backend.
 
 Technologies used in this project:
 
 - HTML
 - CSS/SCSS
 - JavaScript/TypeScript
+- MongoDB
+
+Libraries/Modules used in this project
+
 - React
 - Next JS
-
-Libraries used in this project
-
-- React
-- Next JS
+- Node JS
+- Express
 - React Icons
 - Typed.js
 - TS Particles
