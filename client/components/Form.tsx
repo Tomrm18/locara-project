@@ -4,7 +4,7 @@ import Button from './Button';
 
 interface Props {
   browseMode: boolean;
-  searchQuery: string;
+  searchQuery?: string;
   loading: boolean;
   handleChange: any;
   handleSubmit: any;

@@ -7,7 +7,8 @@ export default async function handler(req: any, res: any)  {
   const { data } =  await axios.get(port);
   
   const ID = req.query.id;
-  const filtered = data.filter(car => car.id == ID)
+  const filtered = data.filter((car: { id: any; }) => car.id == ID)
+  // ((car: { id: any; }) => car.id == ID)
 
   if (filtered.length > 0) {
     res.status(200).json(filtered[0]);

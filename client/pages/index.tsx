@@ -7,7 +7,6 @@ import Typing from "../components/Typing";
 import SpeechBubble from "../components/SpeechBubble";
 
 const Index:NextPage = ({}) => {
-
   return (
     <>
       <Nav navClass="nav-home-container" navModeBrowse={false} />

@@ -35,5 +35,6 @@ Note you will not be able to connect to the backend as the MongoDB cluster info 
 ```
 git clone <project ssh recommended>
 cd locara-project
-npm run install 
+npm install
+npm run install-dev
 ```

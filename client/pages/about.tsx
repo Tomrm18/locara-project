@@ -5,8 +5,7 @@ import SpeechBubble from "../components/SpeechBubble";
 const About:NextPage = () => {
 
   return (
-    <div>
-      
+    <div>   
       <SpeechBubble />
     </div>
   )

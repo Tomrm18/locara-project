@@ -49,8 +49,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(`${server}/api/cars`)
   const cars = await res.json()
   
-  const ids = cars.map((car) => car.id)
-  const paths = ids.map((id) => (
+  const ids = cars.map((car:any) => car.id)
+  const paths = ids.map((id:any) => (
     {
       params: {
         id: id.toString()

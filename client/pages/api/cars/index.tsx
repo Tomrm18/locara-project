@@ -11,6 +11,4 @@ export default async function handler(req:any, res:any) {
   }).catch(({err}) => {
     res.status(400).json({err});
   })
-  // res.status(200).json(data);
- 
 }
