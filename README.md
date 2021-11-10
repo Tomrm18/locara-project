@@ -1,8 +1,9 @@
-# Locara
+# Locara - Car Subscription Service
 
 ## Table of Cotents
 
 - [About](#about)
+- [Installation](#install)
 
 ## About <a name="about"></a>
 
@@ -16,6 +17,7 @@ Technologies used in this project:
 - CSS/SCSS
 - JavaScript/TypeScript
 - MongoDB
+- Git & Github
 
 Libraries/Modules used in this project
 
@@ -26,3 +28,12 @@ Libraries/Modules used in this project
 - React Icons
 - Typed.js
 - TS Particles
+
+## Installation <a name="install"></a>
+Note you will not be able to connect to the backend as the MongoDB cluster info is not comitted to this repo for privacy/security reasons. In order to query and view cars please use the deployed vercel <a href="">webapp</a> instead.
+
+```
+git clone <project ssh recommended>
+cd locara-project
+npm run install 
+```
