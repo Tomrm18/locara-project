@@ -1,9 +1,11 @@
 import { FC, useEffect, useRef } from 'react';
 import Typed from 'typed.js'
 
+
+
 const Typing:FC = () => {
 
-  const el = useRef(null)
+  const el = useRef<HTMLSpanElement>(null!)
 
   useEffect(() => {
     const typed:any = new Typed(el.current, {

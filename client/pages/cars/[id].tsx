@@ -5,7 +5,11 @@ import HomeParticles from "../../components/HomeParticles";
 import { FaCarSide, FaTachometerAlt, FaCogs } from 'react-icons/fa';
 
 
-const Car:NextPage = ({car}) => {
+interface Props {
+  car: any;
+}
+
+const Car:NextPage<Props> = ({car}) => {
 
   return (
     <>
@@ -36,7 +40,7 @@ const Car:NextPage = ({car}) => {
 
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch(`${server}/api/cars/${context.params.id}`);
+  const res = await fetch(`${server}/api/cars/${context.params!.id}`);
   const car = await res.json();
   return {
     props: {

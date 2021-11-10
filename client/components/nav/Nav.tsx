@@ -13,7 +13,7 @@ interface Props {
 
 const Nav:FC<Props> = ({navClass, navModeBrowse, searchQuery, setSearchQuery}) => {
   
-  const handleMenuClick = (e) => {
+  const handleMenuClick = (e:any) => {
     const nav = document.querySelector('nav');
     const toggleMenu = document.getElementsByClassName('toggle-menu')[0]
 
