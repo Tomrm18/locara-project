@@ -3,6 +3,7 @@
 ## Table of Cotents
 
 - [About](#about)
+- [Installation](#install)
 
 ## About <a name="about"></a>
 
@@ -26,3 +27,12 @@ Libraries/Modules used in this project
 - React Icons
 - Typed.js
 - TS Particles
+
+## Install <a name="install"></a>
+Note you will not be able to connect to the backend as the MongoDB cluster info is not comitted to this repo for privacy/security reasons. In order to query and view cars please use the deployed vercel webapp instead.
+
+```
+git clone <project ssh recommended>
+cd locara-project
+npm run install 
+```

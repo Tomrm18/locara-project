@@ -6,7 +6,10 @@
   "scripts": {
     "client": "cd client && npm run all",
     "server": "cd server && nodemon app",
-    "dev": "npm-run-all --parallel server client"
+    "dev": "npm-run-all --parallel server client",
+    "install": "npm-run-all --parallel client-install server-install",
+    "client-install": "cd client && npm i",
+    "server-install": "cd server && npm i"
   },
   "repository": {
     "type": "git",
