@@ -13,9 +13,9 @@ interface Props {
 
 const Nav:FC<Props> = ({navClass, navModeBrowse, searchQuery, setSearchQuery}) => {
   
-  const handleMenuClick = (e:any) => {
+  const handleMenuClick = () => {
     const nav = document.querySelector('nav');
-    const toggleMenu = document.getElementsByClassName('toggle-menu')[0]
+    // const toggleMenu = document.getElementsByClassName('toggle-menu')[0]
 
     nav?.classList.toggle('active')
   }
