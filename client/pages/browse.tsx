@@ -31,7 +31,7 @@ const Browse:NextPage<Props> = ({cars}) => {
     <div>
       <Nav navClass="nav-browse-container" navModeBrowse={true} setSearchQuery={handleSearch}/>
       <h3 className="browse-query">Search Results for 
-        <span className="browse-query-span"> "{searchQuery}"</span>
+        <span className="browse-query-span">  &quot;{searchQuery}&quot;</span>
       </h3>
       <CarList cars={filteredCars} />
     </div>
