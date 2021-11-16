@@ -30,7 +30,7 @@ Libraries/Modules used in this project
 - TS Particles
 
 ## Installation <a name="install"></a>
-Note you will not be able to connect to the backend as the MongoDB cluster info is not comitted to this repo for privacy/security reasons. In order to query and view cars please use the deployed vercel <a href="">webapp</a> instead.
+Note you will not be able to connect to the backend as the MongoDB cluster info is not comitted to this repo for privacy/security reasons. In order to query and view cars please use the deployed vercel <a href="https://locara-project-serverless.vercel.app/">webapp</a> instead.
 
 ```
 git clone <project ssh recommended>
