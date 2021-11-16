@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Search from "../components/Search";
-import HomeParticles from "../components/HomeParticles";
+// import HomeParticles from "../components/HomeParticles";
 import Nav from '../components/nav/Nav';
 import CarAnimation from '../components/CarAnimation' 
 import Typing from "../components/Typing";
@@ -25,7 +25,10 @@ const Index:NextPage = ({}) => {
           </svg>
         </span>
         <CarAnimation />
-        <HomeParticles />
+        {/* {typeof window != undefined ?? 
+          <HomeParticles />
+        } */}
+        {/* <HomeParticles /> */}
       </div>
     </>
   )
