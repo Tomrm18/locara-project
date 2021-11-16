@@ -1,6 +1,6 @@
 import CarList from "../components/CarList";
 import Nav from '../components/nav/Nav';
-import { NextPage ,GetStaticProps } from "next";
+import { NextPage , GetServerSideProps } from "next";
 import { server } from "../config";
 import { useRouter } from "next/dist/client/router";
 import { useState, useEffect } from "react";
@@ -39,7 +39,7 @@ const Browse:NextPage<Props> = ({cars}) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps  = async () => {
   const res = await axios.get(`${server}/cars`);
   const cars = res.data;
   return {
