@@ -31,6 +31,17 @@ app.get("/cars", (req, res) => {
   });
 });
 
+app.get("/cars/:carID", (req, res) => {
+  const { carID } = req.params;
+  CarsModel.find({ id: carID }, (err, result) => {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
 app.post("/submit", async (req, res) => {
   const car = req.body;
   const newCar = new CarsModel(car);

@@ -4,6 +4,7 @@ import { NextPage ,GetStaticProps } from "next";
 import { server } from "../config";
 import { useRouter } from "next/dist/client/router";
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 interface Props {
   cars: any;
@@ -39,9 +40,8 @@ const Browse:NextPage<Props> = ({cars}) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${server}/api/cars`);
-  const data = await res.json();
-  const cars = data.data;
+  const res = await axios.get(`${server}/cars`);
+  const cars = res.data;
   return {
     props: {
       cars,
