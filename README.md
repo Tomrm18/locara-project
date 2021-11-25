@@ -4,6 +4,7 @@
 
 - [About](#about)
 - [Installation](#install)
+- [Live Demo](#demo)
 
 ## About <a name="about"></a>
 
@@ -35,3 +36,6 @@ npm install
 npm run build
 npm start
 ```
+
+## Live Demo <a name="demo"></a>
+The following link is a <a href="https://locara-project-serverless.vercel.app/">live</a> demo of this project.
